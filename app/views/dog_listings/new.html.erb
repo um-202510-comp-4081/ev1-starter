@@ -1,0 +1,15 @@
+<h1>New Dog Listing</h1>
+
+<%= bootstrap_form_with model: @dog_listing, url: dog_listings_path, method: :post, data: { turbo: false } do |form| %>
+  <%= form.text_field :name %>
+  <%= form.text_field :breed %>
+  <%= form.text_field :sex %>
+  <%= form.number_field :weight %>
+  <%= form.number_field :price %>
+  <%= form.text_field :seller_email %>
+
+  <%= form.submit class: 'btn btn-primary' %>
+<% end %>
+
+<%= link_to 'Back', dog_listings_path, class: 'btn btn-secondary' %>
+
